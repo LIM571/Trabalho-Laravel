@@ -1,66 +1,111 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🥋 Executando o CRUD de Lutadores Laravel com Estilo!
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este repositório oferece um sistema CRUD completo para gerenciar lutadores utilizando o framework Laravel, junto com um sistema de login para garantir a segurança dos seus dados. Prepare-se para gerenciar seus lutadores favoritos com maestria!
 
-## About Laravel
+## 📋 Pré-requisitos para a Luta:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Antes de iniciar sua jornada, certifique-se de ter os seguintes itens em seu arsenal:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **PHP 8.0 ou superior** 🐘: A linguagem base para construir seus golpes de código.
+- **Composer** 🎼: Seu fiel escudeiro para gerenciar as dependências do projeto.
+- **Servidor web local** 🌐 (Apache ou Nginx): O ringue onde sua aplicação vai brilhar.
+- **Banco de dados MySQL** 🗄️: O local onde seus dados de luta serão armazenados.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ⚔️ Instalação: Prepare-se para a Batalha!
 
-## Learning Laravel
+1. **Clone o repositório:**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    ```bash
+    git clone https://github.com/LIM571/Trabalho-Laravel.git
+    ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. **Entre no ringue:**
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    ```bash
+    cd Trabalho-Laravel
+    ```
 
-## Laravel Sponsors
+3. **Instale as dependências:**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    ```bash
+    composer install
+    ```
 
-### Premium Partners
+4. **Configure o banco de dados:**
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    Crie um arquivo `.env` na pasta raiz do projeto e defina as credenciais de acesso ao seu banco de dados MySQL:
 
-## Contributing
+    ```env
+    DB_CONNECTION=mysql
+    DB_HOST=localhost
+    DB_PORT=3306
+    DB_DATABASE=nome_do_seu_banco_de_dados
+    DB_USERNAME=nome_de_usuario
+    DB_PASSWORD=sua_senha
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. **Execute as migrations:**
 
-## Code of Conduct
+    ```bash
+    php artisan migrate
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. **Semeie o banco de dados (opcional):**
 
-## Security Vulnerabilities
+    ```bash
+    php artisan db:seed
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. **Inicie o servidor web local:**
 
-## License
+    Siga as instruções específicas do seu servidor web local para iniciar o servidor.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🌐 Acesse a Aplicação:
+
+Abra seu navegador e acesse a URL:
+
+```url
+http://localhost:8000
+```
+
+## 🏟️ **Login: Entre na Arena!**
+
+Utilize as credenciais padrão para entrar na arena:
+
+- **Usuário**: admin
+- **Senha**: 123456
+
+## 🛠️ **Funcionalidades do CRUD: Seus Golpes Devastadores!**
+
+- **Cadastro de Lutadores**:
+
+  - 🆕 Crie novos lutadores com nome, categoria, nacionalidade e data de nascimento.
+  - 📸 Anexe fotos dos lutadores (opcional) para torná-los ainda mais épicos!
+
+- **Listagem de Lutadores**:
+
+  - 📋 Visualize todos os lutadores cadastrados em uma lista organizada.
+  - 🔍 Utilize filtros para encontrar lutadores específicos por nome, categoria ou nacionalidade.
+
+- **Edição de Lutadores**:
+
+  - ✏️ Modifique as informações dos lutadores já cadastrados.
+  - 🖼️ Altere as fotos dos lutadores (opcional) para atualizar seus visuais.
+
+- **Exclusão de Lutadores**:
+
+  - 🗑️ Remova lutadores do sistema quando necessário.
+
+## ℹ️ **Observações: Dicas para Vencer!**
+
+- Este projeto é um exemplo básico de CRUD em Laravel. Você pode personalizá-lo e adaptá-lo de acordo com suas necessidades e desejos.
+- Consulte a documentação oficial do Laravel 📚 para aprofundar seus conhecimentos e dominar as técnicas.
+- Caso tenha dúvidas ou problemas, abra uma issue no repositório do GitHub para obter ajuda.
+
+Aproveite seu novo sistema CRUD de Lutadores e domine a arte da gestão! 🎉
+
+
+
+
+
+
